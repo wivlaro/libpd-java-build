@@ -32,11 +32,12 @@ Which should build a binary for your platform and add it to the libpd.jar.
 Using mingw-w64, based on instructions here http://tinyurl.com/mw64-use
 Also, install the mingw-w64 pthreads, as http://tinyurl.com/mw64-pthread
 
+Your JAVA_HOME environment variable should be set up to a valid JDK. 
+
 #### Cross-compiling for 32-bit Windows
 
-    $ make OS=Windows_NT CC='i686-w64-mingw32-gcc -m32' JAVA_HOME="/media/WINXP/Program Files/Java/jdk1.7.0_04" clean javalib
+    $ make CC='i686-w64-mingw32-gcc -m32' PDNATIVE_ARCH=x86 clean javalib
 
 #### Cross-compiling for 64-bit Windows
 
-    $ make OS=Windows_NT CC='x86_64-w64-mingw32-gcc -m64' JAVA_HOME="/media/WINXP/Program Files/Java/jdk1.7.0_04" clean javalib
-
+    $ make CC='x86_64-w64-mingw32-gcc -m64' PDNATIVE_ARCH=x86_64 clean javalib
