@@ -1,8 +1,6 @@
-export PDJAVA_BUILD=../java-build
-export PDJAVA_JAR=../libpd.jar
 
 clean:
-	$(MAKE) -C libpd clean
+	$(MAKE) -C libpd PDJAVA_BUILD=../java-build PDJAVA_JAR=../libpd.jar clean
 
 javalib:
-	$(MAKE) -C libpd javalib
+	$(MAKE) -C libpd PDJAVA_BUILD=../java-build PDJAVA_JAR=../libpd.jar javalib
