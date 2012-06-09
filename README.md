@@ -6,11 +6,20 @@ Project including libpd containing binary builds for Java
 ## Quickstart
 
 Hopefully, you should just be able to include libpd.jar in your project and
-you're good to go. Otherwise, you can try and run:
+you're good to go.
+
+## Building Yourself
+
+First, you'll need to get the libpd submodule:
+
+    $ git submodule init
+    $ git submodule update
+
+Then, you can try and run:
 
     $ make clean javalib
 
-Which should try and build a binary for your platform and add it to the libpd.jar.
+Which should build a binary for your platform and add it to the libpd.jar.
 
 ## Cross-compilation
 
